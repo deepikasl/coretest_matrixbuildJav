@@ -12,8 +12,8 @@ matrix:
 #include this version with the env 
   include:               
     - jdk: openjdk7
-      env:
-        - foo=fubu
+      env: foo=fubu
+         
 #excludes this version 
   exclude:             
     - jdk: oraclejdk8
