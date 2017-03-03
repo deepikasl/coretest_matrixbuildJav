@@ -35,7 +35,10 @@ build:
     - cp -r target shippable/codecoverage
     - docker ps
   #  - if [ "$SHIPPABLE_JDK_VERSION" == "oraclejdk7" ]; then foobar; fi # to make oraclejdk7 fail and this version allows allow_failure
-    
+    - lsb_release -a
+    - docker --version
+    - docker info
+
   cache: true
   cache_dir_list: 
     - $SHIPPABLE_BUILD_DIR/shippable.yml
