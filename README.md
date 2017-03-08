@@ -51,7 +51,7 @@ This is Sample Java project with Jacoco reports
 
      email:  - shiptest.rc.ow@gmail.com ,
              - shiptest.rc.me@gmail.com
-
+              pwd:Qhode1234
      irc:    - "chat.freenode.net#testrc-irc" , 
              - "chat.freenode.net#testalpha-irc"
 
@@ -60,7 +60,7 @@ This is Sample Java project with Jacoco reports
               team: shiphitchcockteam 
 
      hipchat: username: shiptest.rc.ow@gmail.com
-              pwd: qhode1234
+              pwd: Qhode1234
               https://shiphitchcock.hipchat.com/chat
 
 
