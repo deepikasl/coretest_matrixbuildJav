@@ -38,7 +38,7 @@ build:
     - lsb_release -a
     - docker --version
     - docker info
-    - sleep 10m
+    
 
   cache: true
   cache_dir_list: 
