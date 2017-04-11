@@ -4,27 +4,7 @@ jdk:
   - openjdk8
   #- openjdk7    
   - oraclejdk7 
-  - oraclejdk8
   
-env:
-  - env=test1
-matrix:
-#include this version with the env 
-  include:               
-    - jdk: openjdk7
-      env: foo=fubu
-         
-#excludes this version 
-  exclude:             
-    - jdk: oraclejdk8
-      env:
-        - env=test1 
-#allows failure for this version
-  allow_failures:
-    - jdk: oraclejdk7 
-
-addons:
-  firefox: "25.0"    
 build:
   #advancedReporting: true   #by default adavanced reporting is true
   ci:
@@ -39,10 +19,6 @@ build:
     - docker --version
     - docker info
     
-
-  cache: true
-  cache_dir_list: 
-    - $SHIPPABLE_BUILD_DIR/shippable.yml
     
 integrations:    
   notifications:
