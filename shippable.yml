@@ -5,6 +5,9 @@ jdk:
   #- openjdk7    
   - oraclejdk7 
   
+git:
+   submodules: false
+
 build:
   #advancedReporting: true   #by default adavanced reporting is true
   ci:
