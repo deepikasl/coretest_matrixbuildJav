@@ -7,6 +7,20 @@ jdk:
   
 git:
    submodules: false
+matrix:
+#include this version with the env 
+  include:               
+    - jdk: openjdk7
+      env: foo=fubu
+         
+#excludes this version 
+  exclude:             
+    - jdk: oraclejdk8
+      env:
+        - env=test1 
+#allows failure for this version
+  allow_failures:
+    - jdk: oraclejdk7 
 
 build:
   #advancedReporting: true   #by default adavanced reporting is true
