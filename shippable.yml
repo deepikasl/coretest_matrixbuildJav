@@ -4,9 +4,10 @@ jdk:
   - openjdk8
   #- openjdk7    
   - oraclejdk7 
+  - oraclejdk8
   
-git:
-   submodules: false
+env:
+  - env=test1
 matrix:
 #include this version with the env 
   include:               
@@ -22,6 +23,8 @@ matrix:
   allow_failures:
     - jdk: oraclejdk7 
 
+addons:
+  firefox: "25.0"    
 build:
   #advancedReporting: true   #by default adavanced reporting is true
   ci:
@@ -37,14 +40,23 @@ build:
     - docker info
     
     
+
+  cache: true
+  cache_dir_list: 
+    - $SHIPPABLE_BUILD_DIR/shippable.yml
+    
 integrations:    
   notifications:
+      
     - integrationName: email         
       type: email        
       recipients: 
         - deepika@shippable.com
-      sendLogsInEmail: true
+      sendLogsInEmail : true
+      on_start: always
+      on_success: always 
+      on_failure: always 
       
-    
+ 
   
       
