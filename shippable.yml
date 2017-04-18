@@ -44,11 +44,6 @@ build:
   cache: true
   cache_dir_list: 
     - $SHIPPABLE_BUILD_DIR/shippable.yml
-before_script:
-  - mkdir -p shippable/testresults
-
-script:
-  - coverage run `which nosetests` test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
   
 integrations:    
   notifications:
@@ -57,7 +52,8 @@ integrations:
       type: email        
       recipients: 
         - deepika@shippable.com
-      sendLogsInEmail : true
+      sendConsoleLogs : true
+      sendCoverageReports : true
       on_start: always
       on_success: always 
       on_failure: always 
