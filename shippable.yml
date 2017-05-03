@@ -52,9 +52,6 @@ integrations:
       type: email        
       recipients: 
         - deepika@shippable.com
-      sendConsoleLogs : true
-      sendCoverageReports : true
-      on_start: always
       on_success: always 
       on_failure: always
   
